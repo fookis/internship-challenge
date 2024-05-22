@@ -36,9 +36,9 @@ python3 manage.py runserver
 cd frontend/
 ```
 
-2. Instale os react scripts.
+2. Instale o npm.
 ```
-npm install react-scripts
+npm install
 ```
 
 ## Visualizando aplicação
