@@ -22,7 +22,7 @@ class TestObterNumDiv(unittest.TestCase):
         response = self.client.get('/api/obter-num-div/', {'intervaloDe': -1, 'intervaloAte': 10})
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertIn('error', response.data, "Não retornou erro")
-        self.assertEqual(response.data['error'], "Por favor, informe números de intervalo válidos")
+        self.assertEqual(response.data['error'], "Por favor, informe números maiores que zero")
 
 if __name__ == '__main__':
     unittest.main()

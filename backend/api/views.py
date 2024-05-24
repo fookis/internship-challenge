@@ -10,7 +10,7 @@ class ObterNumDiv(APIView):
             intervaloAte = int(request.query_params.get('intervaloAte'))
 
             if intervaloDe <= 0 or intervaloAte <= 0:
-                return Response({'error': 'Por favor, informe números de intervalo válidos'}, status=status.HTTP_400_BAD_REQUEST)
+                return Response({'error': 'Por favor, informe números maiores que zero'}, status=status.HTTP_400_BAD_REQUEST)
             
             resultado = self.obterMenorNumDivisor(intervaloDe, intervaloAte)
             
